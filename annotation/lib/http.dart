@@ -263,3 +263,8 @@ class Part {
   final String contentType;
   const Part({this.value, this.name, this.fileName, this.contentType});
 }
+
+abstract class RequestConverter<T, S> {
+  S convert(T object);
+}
+
